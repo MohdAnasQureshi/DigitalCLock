@@ -1,175 +1,170 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
-#hour, #minute, #second, .dot {
-    font-size: 4rem;
-    font-weight: 900;
-    color: white;
+#hour,
+#minute,
+#second,
+.dot {
+  font-size: 4rem;
+  font-weight: 900;
+  color: white;
 }
-.day, .month, .year {
-    
-    font-size: 1.5rem;
-    font-weight: 900;
-    color : white;
+.day,
+.month,
+.year {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: white;
 }
 
 .year {
-    color: rgb(255, 255, 115);
+  color: rgb(255, 255, 115);
 }
-body{
-    background: #302342;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  background: #302342;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    
-    flex-wrap: wrap;
-   
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-wrap: wrap;
 }
 
 section::before {
-    content: "";
-    position: absolute;
-    top: 20%;
-    left: -5%;
-    height: 14rem;
-    width: 14rem;
-    border-radius: 10%;
-    outline: 1px solid rgba(255,255,255,0.2);
-    background: linear-gradient(#62d58c, #1375de);
-    animation: animatebig 5s ease-in-out infinite;
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: -5%;
+  height: 14rem;
+  width: 14rem;
+  border-radius: 10%;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(#62d58c, #1375de);
+  animation: animatebig 5s ease-in-out infinite;
 }
 
 section::after {
-    content: "";
-    position: absolute;
-    bottom: 24%;
-   right: 1%;
-   outline: 1px solid rgba(255,255,255,0.2);
-    height: 10rem;
-    width: 10rem;
-    border-radius: 10%;
-    background: linear-gradient(#8756d7, #e25d66);
-    animation: animate 5s ease-in-out infinite;
-    animation-delay: -2.5s;
+  content: "";
+  position: absolute;
+  bottom: 24%;
+  right: 1%;
+  outline: 1px solid rgba(255, 255, 255, 0.2);
+  height: 10rem;
+  width: 10rem;
+  border-radius: 10%;
+  background: linear-gradient(#8756d7, #e25d66);
+  animation: animate 5s ease-in-out infinite;
+  animation-delay: -2.5s;
 }
 
 @keyframes animate {
-    0%,100%
-    {
-        transform: translateY(100px)
-    }
-    50%
-    {
-        transform: translateY(-20px)
-    }
-    
+  0%,
+  100% {
+    transform: translateY(100px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes animatebig {
-    0%,100%
-    {
-        transform: translateY(10px)
-    }
-    50%
-    {
-        transform: translateY(-110px)
-    }
-    
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-110px);
+  }
 }
 
-@media screen and (min-width:800px) {
-    section {
-        width: 50vw;
-    }
+@media screen and (min-width: 800px) {
+  section {
+    width: 50vw;
+  }
 }
-
 
 .clock {
-    position: relative;
-    width: 95%;
-    height: 25%;
-    background: rgba(255,255,255,0.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    
-   
+  position: relative;
+  width: 95%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .clock .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    backdrop-filter: blur(10px);
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
 }
 .clock .container2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-     width: 80%;
-     margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
 }
 
 .clock .container div:nth-child(odd) {
-    padding: 2px 10px;
-    margin: 5px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2px 10px;
+  margin: 5px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
-.clock .container2 div{
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 15px;
-    background: rgba(255,255,255,0.1);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
+.clock .container2 div {
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #second {
-    color: rgb(186, 255, 186);
+  color: rgb(186, 255, 186);
 }
 
 #ampm {
-    position: relative;
-    top: -30px;
-    font-size: 1.5em;
-    color: white;
-    font-weight: 700;
+  position: relative;
+  top: -30px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 700;
 }
 
 .date {
-    position: relative;
-    
-    height: 40%; 
-    background: rgba(255,255,255,0.05);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    margin-top: 20px;
-    
+  position: relative;
+
+  height: 40%;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 20px;
 }
