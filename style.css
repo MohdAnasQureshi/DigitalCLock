@@ -17,8 +17,8 @@
 .day,
 .month,
 .year {
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 1.6rem;
+  font-weight: 1000;
   color: white;
 }
 
@@ -40,8 +40,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  flex-wrap: wrap;
+  align-content: space-around;
 }
 
 section::before {
@@ -97,6 +96,20 @@ section::after {
   }
 }
 
+@media screen and (width: 280px) {
+  #hour,
+  #minute,
+  #second,
+  .dot {
+    font-size: 2.5rem;
+  }
+  .day,
+  .month,
+  .year {
+    font-size: 1.2rem;
+  }
+}
+
 .clock {
   position: relative;
   width: 95%;
@@ -121,12 +134,12 @@ section::after {
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
 .clock .container div:nth-child(odd) {
-  padding: 2px 10px;
+  padding: 2px 5px;
   margin: 5px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
@@ -135,7 +148,7 @@ section::after {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 .clock .container2 div {
-  padding: 10px 20px;
+  padding: 15px 15px;
   margin: 5px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.1);
@@ -159,7 +172,7 @@ section::after {
 .date {
   position: relative;
 
-  height: 40%;
+  height: 60%;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   z-index: 1;
